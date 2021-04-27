@@ -1,0 +1,88 @@
+@import './variables';
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body {
+    margin: 0;
+    height: 200vh;
+    color: white;
+    
+    nav{
+        background-color: $darkGrey;
+        height: 4vh;
+        @include center;
+
+        #logo{
+            font-size: x-large;
+        }
+
+        a{
+            color: white;
+            color: white;
+            text-decoration: none;
+            font-family: 'Lato', sans-serif;
+
+            img{
+                height: 40px;
+            }
+        }
+    }
+    
+    div.Start_wrapper{
+        @include grid;
+        height: 100%;
+        background: blueviolet; 
+
+            div.Start_search_flex{
+                @include center; 
+                flex-direction: column;
+                grid-area: sr;
+                height: 30vh;
+                width: 70%;
+                background: brown;
+                border-radius: 5px;
+                margin: auto;
+
+                input.Start_search_box{
+                    height: 5vh;
+                    width: 50vw;
+                    font-size: x-large;
+                }
+
+                div.Start_icon_categories{
+                    
+                    img.Start_icon_1{
+                        height: 50px;
+                    }
+                }
+            }
+        
+        div.Start_itemrow_flex{
+                grid-area: mn;
+
+                div.Start_itemrow_content{
+
+                }
+        }
+    }
+    
+   
+    main.Publish_wrapper{
+        div.Publish_container{
+
+            
+
+
+            form.Publish_form{
+            @include center;
+            flex-direction: column;
+
+            }
+        }
+    }
+
+    footer{
+        margin-top: 10vh;
+        height: 5vh;
+    }
+
+}

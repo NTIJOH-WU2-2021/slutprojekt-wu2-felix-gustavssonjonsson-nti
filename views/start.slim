@@ -1,0 +1,41 @@
+- require_relative "../model.rb"
+
+div class="Start_wrapper"
+    div class="Start_search_flex"
+        input type="text" placeholder="Vad letar du efter?" class="Start_search_box" 
+        div class="Start_icon_categories"
+            img src="../misc/icon.png" alt="" class="Start_icon_1" /
+            img src="" alt=""/
+            img src="" alt=""/
+        p Kategorier
+
+    ul class="Start_item_list_remove"
+        - article.reverse_each do |article|
+            li 
+                div class="Start_item_column_wrapper"
+                    div class="Start_item_column_flex"  
+                        div class="Start_item_column_image"
+                            img src="" alt=""/
+                        div class="Start_item_column_content" 
+                            p class="content_adress_date" #{article["adress"]} #{article["date_created"]}
+                            a class="content_title" href="articles/#{article['article_id']}"  #{article["title"]} 
+                            p class="content_text" #{article["content"]}
+                            p  #{article["tag_name"]}
+                            p class="content_price" #{article["price"]} sek
+
+
+/   div // main box
+    div // group for search and categories symblobs
+        p // search bar - potential switch to other tag
+        div // holding the categories / have icons and titles
+            img src="" alt=""/
+            img src="" alt=""/
+            img src="" alt=""/
+        p Kategorier
+    div // flex for the row of items
+        div // first item copypaste
+            img src="" alt=""// this will have related pic to the kategori
+            div // normal no hover
+                div //kategori text comes up during hover
+            div // hover
+                div text / text comes up + slight fade
